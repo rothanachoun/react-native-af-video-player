@@ -47,14 +47,16 @@ const ControlBar = props => {
         </View>
 
         <View>
-          <ToggleIcon
-            paddingRight
-            onPress={() => props.toggleFS()}
-            iconOff="fullscreen"
-            iconOn="fullscreen-exit"
-            isOn={fullscreen}
-            theme={theme.fullscreen}
-          />
+          {!inlineOnly && (
+            <ToggleIcon
+              paddingRight
+              onPress={() => props.toggleFS()}
+              iconOff="fullscreen"
+              iconOn="fullscreen-exit"
+              isOn={fullscreen}
+              theme={theme.fullscreen}
+            />
+          )}
         </View>
       </LinearGradient>
     );
